@@ -19,6 +19,7 @@ class ParsedBitmap{
         this.buffer.writeInt32LE(width, 18);
         this.buffer.writeInt32LE(height, 22);
     }
+    
     convertBlackAndWhite(){
         for(let i = 54; i < (this.numColors * 4) + 54; i+=4){
             let r = this.buffer[i];
@@ -34,8 +35,17 @@ class ParsedBitmap{
                 this.buffer[i+2] = 0;
             }
         }
-        return this.buffer;
+
+    greenScale(){
+       for(let i = 0; i < colorTable.length; i+=4){
+           this.colorTable[i] = 0;
+       }
     }
+
+
+    
+        return this.buffer;
+}
     
 }
 
