@@ -53,6 +53,14 @@ For this assignment you will be building a bitmap (`.bmp`) transformer CLI. It w
 
 ##  Documentation
 In your README.md describe the exported values of each module you have defined. Every function description should include it's arity (expected number of parameters), the expected data for each parameter (data-type and limitations), and it's behavior (for both valid and invalid use). Feel free to write any additional information in your README.md.
+-bitmap.js = exported = ParsedBitmap
+  -ParsedBitmap is a class with properties defining the size,color,height,and etc. 
+  -has methods for transformations
+- app.js = core application for the transformation methods to go through in order to create the wanted transformation; read and writes my file.  It is also the callback pertaining to file.js 
+-file.js = using the fs module in order to read the file if no error
+  -writes files by the parameters of fileName, newBuffer and callback;
+  -this file also helps my app.js to be able to read and write files properly(callback).
+  
 
 ## Tips
 You will want to define a strategy for solving the problem before you begin to code. Once you have a strategy defined, you can break it into steps that can be split into helper modules. Each helper module should solve a small specific problem. The main module should utilize the helper modules to execute your original strategy.
